@@ -2,7 +2,6 @@ import java.lang.Math.pow
 
 class Cylinder {
 
-
     var height = 0.0
     var radius = 0.0
 
@@ -21,6 +20,15 @@ class Cylinder {
         this.radius = 1.0
 
     }
+
+    constructor(height: Double, radius: Double, conversion:Double) {
+        if (height > 0 && radius > 0) {
+            this.height = height*conversion
+            this.radius = radius*conversion
+        }
+
+    }
+
 
 
     fun calculateVolume(): Double {
